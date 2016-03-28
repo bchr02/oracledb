@@ -41,8 +41,10 @@
       "async": "~0.9.0"
   },
   "scripts": {
+      "preinstall": "npm install instantclient",
       "test": "mocha -R spec --timeout 10000 test/*.js",
-      "testWindows": "mocha -R spec --timeout 0 test\\*.js"
+      "testWindows": "mocha -R spec --timeout 0 test\\*.js",
+      "install": "node_modules/.bin/instantclient && node-gyp rebuild"
   },
   "engines": {
     "node": ">=0.10.28 <6"
